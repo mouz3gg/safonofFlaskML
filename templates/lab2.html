@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+{{ super() }}
+<p>Логистическая регрессия
+<form action="/p_lab2" method="POST">
+    <p><input type="text" class="form_text" name="list1">Скорость ветра</p>
+    <p><input type="text" class="form_text" name="list2">Влажность</p>
+    <p><input type="text" class="form_text" name="list3">Облачность</p>
+    <input type="submit" class="form_btn" value="Узнать погоду">
+    <h1>{{class_model}}</h1>
+    </p>
+</form>
+{% endblock %}

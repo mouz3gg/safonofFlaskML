@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+{{ super() }}
+<p>Логистическая регрессия для определения размера обуви
+    <form action="/p_lab3" method="POST">
+    <p><input type="text" class="form_text" name="list1">Рост</p>
+    <p><input type="text" class="form_text" name="list2">Вес</p>
+    <p><select name="list3" class="form_text">
+        <option value='0'>Мужской</option>
+        <option value='1'>Женский</option>
+        Пол</select></p>
+    <input type="submit" class="form_btn" value="Узнать размер обуви">
+    <h1>{{class_model}}</h1>
+    </p>
+</form>
+{% endblock %}
