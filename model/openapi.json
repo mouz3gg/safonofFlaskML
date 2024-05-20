@@ -1,0 +1,41 @@
+{
+  "parameters": [
+    {
+      "name": "wind",
+      "in": "query",
+      "type": "number",
+      "required": true,
+      "description": "Wind speed"
+    },
+    {
+      "name": "wet",
+      "in": "query",
+      "type": "number",
+      "required": true,
+      "description": "Wetness level"
+    },
+    {
+      "name": "cloud",
+      "in": "query",
+      "type": "number",
+      "required": true,
+      "description": "Cloud coverage"
+    }
+  ],
+  "responses": {
+    "200": {
+      "description": "Prediction result",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "weather": {
+            "type": "string"
+          }
+        }
+      },
+      "examples": {
+        "weather": "sunny"
+      }
+    }
+  }
+}
