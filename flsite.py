@@ -35,7 +35,7 @@ def f_lab1():
 @app.route("/p_lab2", methods=['POST', 'GET'])
 def f_lab2():
     if request.method == 'GET':
-        return render_template('lab2.html', title="Логистическая регрессия", menu=menu, class_model='')
+        return render_template('lab2.html', title="Линейная регрессия", menu=menu, class_model='')
     if request.method == 'POST':
         X_new2 = np.array([[float(request.form['list1']),
                             float(request.form['list2']),

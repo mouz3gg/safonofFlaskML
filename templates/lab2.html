@@ -2,7 +2,7 @@
  
 {% block content %}
 {{ super() }}
-<p>Логистическая регрессия для определения погоды
+<p>Бинарное дерево для определения погоды
 <form action="/p_lab2" method="POST">
     <p><input type="text" class="form_text" name="list1">Скорость ветра</p>
     <p><input type="text" class="form_text" name="list2">Влажность</p>
@@ -10,5 +10,10 @@
     <input type="submit" class="form_btn" value="Узнать погоду">
     <h1>{{class_model}}</h1>
     </p>
+    <p>MSE: 0.0484339949133278</p>
+    <p>MSPE: 0.1937359796533112</p>
+    <p>MAPE: 581753924530615.0</p>
 </form>
+
+
 {% endblock %}
