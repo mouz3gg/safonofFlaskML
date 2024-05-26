@@ -17,7 +17,7 @@ loaded_model_obuv = pickle.load(open('model/obuv_model', 'rb'))
 
 @app.route("/")
 def index():
-    return render_template('index.html', title="Лабораторные работы, выполненные Гришиным Н.С.", menu=menu)
+    return render_template('index.html', title="Лабораторные работы, выполненные Сафоновым", menu=menu)
 
 
 @app.route("/p_knn", methods=['POST', 'GET'])
@@ -67,15 +67,6 @@ def f_lab3():
         return render_template('lab3.html', title="Логистическая регрессия", menu=menu,
                                class_model="Это: " + pred3)
 
-@app.route('/obuv_api', methods=['get'])
-def get_obuv():
-    request_data = request.get_json()
-    X_new = np.array([[float(request_data['height']),
-                       float(request_data['weight']),
-                       float(request_data['sex'])]])
-    pred = loaded_model_obuv.predict(X_new)
-
-    return jsonify(obuv=pred[0])
 
 if __name__ == "__main__":
     app.run(debug=True)
